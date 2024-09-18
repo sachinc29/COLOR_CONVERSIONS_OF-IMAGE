@@ -277,7 +277,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
-![Screenshot 2024-09-12 183351](https://github.com/user-attachments/assets/e4c7919d-f99b-43ed-ad97-ff92b225fed3)
+![image](https://github.com/user-attachments/assets/1743997f-450f-4287-a72a-51cd4b045c97)
 
 
 
@@ -294,7 +294,7 @@ cv2.destroyAllWindows()
 ```
 
 
-![Screenshot 2024-09-12 183406](https://github.com/user-attachments/assets/5a3ebad5-d54c-4475-a582-3299318e102b)
+![image](https://github.com/user-attachments/assets/99912f03-90a8-4b89-91eb-fa2ca22b4e74)
 
 
 ### viii)Write and Save the Modified Image
