@@ -301,12 +301,12 @@ cv2.destroyAllWindows()
 Save the final modified image to your local directory.
 ```
 import cv2
-img = cv2.imread("dog.png")
+img = cv2.imread("image3.jpg")
 img = cv2.resize(img,(300,200))
 cv2.imwrite('nature_pic.jpg',img)
 ```
 
-![Screenshot 2024-09-12 183419](https://github.com/user-attachments/assets/87a46cd3-dd0b-4c63-9600-d9f7901b1c6d)
+![image](https://github.com/user-attachments/assets/5c87a2fd-fc10-46af-a56c-138eb7dd077b)
 
 
 ## Result:
