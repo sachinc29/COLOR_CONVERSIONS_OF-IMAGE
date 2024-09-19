@@ -115,7 +115,7 @@ stop = (300, 200)
 color = (255, 255, 100)
 thickness = 10           
 res_img = cv2.rectangle(image, start, stop, color, thickness)
-cv2.imshow('WINDOW', res_img)
+cv2.imshow('Sachin.C', res_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
