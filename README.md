@@ -108,7 +108,7 @@ cv2.destroyAllWindows()
 3.Draw a rectangle around a specific region of interest in the image.
 ```
 import cv2
-image = cv2.imread("dog.png")
+image = cv2.imread("image3.jpg")
 image = cv2.resize(image, (400, 300))
 start = (150, 100)
 stop = (300, 200)
