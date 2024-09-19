@@ -286,7 +286,7 @@ cv2.destroyAllWindows()
 (2) Flip the original image vertically and display it.
 ```
 import cv2
-image = cv2.imread("dog.png")
+image = cv2.imread("image3.jpg")
 image = cv2.resize(image,(300,200))
 res=cv2.rotate(image,cv2.ROTATE_90_CLOCKWISE)
 cv2.imshow('ORIGINAL IMAGE',image)
