@@ -209,10 +209,12 @@ cv2.destroyAllWindows()
 ### iv)Access and Manipulate Image Pixels
 (1) Access and print the value of the pixel at coordinates (100, 100)
 ```
+import cv2
+image = cv2.imread("image3.jpg")
 pixel_value = image[100, 100]
 print(f"Pixel value at (100, 100): {pixel_value}")
 ```
-![Screenshot 2024-09-12 183250](https://github.com/user-attachments/assets/d9db2939-3721-492a-89aa-19547fc495b7)
+![image](https://github.com/user-attachments/assets/f45c4a53-988f-42ec-9e15-d87b19738a90)
 
 
 
