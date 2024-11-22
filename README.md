@@ -83,15 +83,18 @@ plt.show()
 ### Draw Shapes and Add Text
 (1) Draw a line from the top-left to the bottom-right of the image.
 ```py
-# Draw a line from top-left to bottom-right
-line_img = cv2.line(img_rgb, (0, 0), (768, 600), (255, 0, 0), 2) # cv2.line(image, start_point, end_point, color, thickness)
-plt.imshow(line_img, cmap='viridis')  
-plt.title("Image with Line")
-plt.axis('off')  
-plt.show()
+import cv2
+image = cv2.imread("image3.jpg")
+image = cv2.resize(image, (612, 612))
+res = cv2.line(img,(0,0),(612,612),(100,100,205),10)
+
+# Display the HSV image
+cv2.imshow('Image Window', res)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 ```
 
-![image](https://github.com/user-attachments/assets/3a58787f-9c75-40a8-987f-6b0522d7ca1f)
+![image](https://github.com/user-attachments/assets/3d5aed8d-9fbe-4249-aa7e-8790ceb46a66)
 
 
 2. Draw a circle at the center of the image.
