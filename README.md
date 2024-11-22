@@ -66,55 +66,44 @@ Save the final modified image to your local directory.
 i.Load an image from your local directory and display it.
 ```
 import cv2
-image=cv2.imread('image3.jpg')
-cv2.imshow('Sachin.C',image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+import matplotlib.pyplot as plt
+# Read the image using OpenCV
+img = cv2.imread('image3.jpg', cv2.IMREAD_COLOR)
+# Convert BGR (OpenCV's default) to RGB (Matplotlib's expected color order)
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+# Display the image using Matplotlib
+plt.imshow(img_rgb, cmap='viridis')  # You can change 'viridis' to another cmap or use None for RGB images
+plt.title("Original Image")
+plt.axis('off')  # Removes axis ticks and labels
+plt.show()
 ```
-![image](https://github.com/user-attachments/assets/d85dc05f-3945-4c2b-a796-5cf82101bdbc)
+![image](https://github.com/user-attachments/assets/2ff0fae4-cf9b-4ea2-a87b-cb3ca1fd0472)
 
 
 ### Draw Shapes and Add Text
 (1) Draw a line from the top-left to the bottom-right of the image.
 ```py
-import cv2
-image = cv2.imread("image3.jpg")
-image = cv2.resize(image, (612, 612))
-res = cv2.line(image,(0,0),(612,612),(100,100,205),10)
-
-# Display the HSV image
-cv2.imshow('Sachin.C', res)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# Draw a line from top-left to bottom-right
+line_img = cv2.line(img_rgb, (0, 0), (768, 600), (255, 0, 0), 2) # cv2.line(image, start_point, end_point, color, thickness)
+plt.imshow(line_img, cmap='viridis')  
+plt.title("Image with Line")
+plt.axis('off')  
+plt.show()
 ```
 
-![image](https://github.com/user-attachments/assets/d6951cf8-4862-4e7b-8cd4-56addec52c7b)
+![image](https://github.com/user-attachments/assets/3a58787f-9c75-40a8-987f-6b0522d7ca1f)
 
 
 2. Draw a circle at the center of the image.
 ```py
-import cv2
-image = cv2.imread("image3.jpg")
-
-# Convert to grayscale
-img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-img = cv2.imread("image3.jpg")
-img = cv2.resize(img, (612, 612))
-img.shape
-start=(0,0)
-stop=(612,612)
-color=(100,255,100)
-thickness=20
-
-res_img=cv2.rectangle(img,start,stop,color,thickness)
-
-# Display the HSV image
-cv2.imshow('Image Window', res_img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+circle_img = cv2.circle(img_rgb,(400,300),150,(255,0,0),10) # cv2.circle(image, center, radius, color, thickness)
+plt.imshow(circle_img, cmap='viridis')  
+plt.title("Image with Circle")
+plt.axis('off')  
+plt.show()
 ```
 
-![image](https://github.com/user-attachments/assets/ddfa518e-8498-47e2-a8a2-8046c8bfbeae)
+![image](https://github.com/user-attachments/assets/078e4de0-f9e4-46eb-9702-2e7a913d3397)
 
 
 3.Draw a rectangle around a specific region of interest in the image.
@@ -137,21 +126,19 @@ cv2.destroyAllWindows()
 
 4.Add the text "OpenCV Drawing" at the top-left corner of the image.
 ```
-import cv2
-image = cv2.imread("image3.jpg")
-image = cv2.resize(image, (400, 300))
-text = "OpenCV Drawing"
-position = (10, 50)
-font = cv2.FONT_HERSHEY_SIMPLEX
-font_scale = 1
-color = (255, 255, 255) 
-thickness = 2
-res = cv2.putText(image, text, position, font, font_scale, color, thickness, cv2.LINE_AA)
-cv2.imshow('Sachin.C', res)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# Load the image
+image = cv2.imread('image3.jpg') 
+
+# Convert BGR (OpenCV's default) to RGB (Matplotlib's expected color order)
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+img.shape
+text_img = cv2.putText(img_rgb, "OpenCV Drawing", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 10)  ## cv2.putText(image, text, position, font, font_scale, color, thickness)
+plt.imshow(text_img, cmap='viridis')  
+plt.title("Image with Text")
+plt.axis('off')  
+plt.show()
 ```
-![image](https://github.com/user-attachments/assets/06239020-e2d6-47a4-9bc0-4e8f1b0ad508)
+![image](https://github.com/user-attachments/assets/52855f57-8781-4bf5-be91-91c70afeb972)
 
 ### iii)Image Color Conversion
 (i)Convert the image from RGB to HSV and display it
