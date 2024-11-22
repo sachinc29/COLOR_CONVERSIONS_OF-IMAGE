@@ -76,28 +76,40 @@ cv2.destroyAllWindows()
 
 ### Draw Shapes and Add Text
 (1) Draw a line from the top-left to the bottom-right of the image.
-```
+```py
 import cv2
 image = cv2.imread("image3.jpg")
-image = cv2.resize(image, (400, 300))
-res = cv2.line(image, (0, 0), (image.shape[1], image.shape[0]), (255,0,0), 10)
+image = cv2.resize(image, (612, 612))
+res = cv2.line(image,(0,0),(612,612),(100,100,205),10)
+
+# Display the HSV image
 cv2.imshow('Sachin.C', res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
-![image](https://github.com/user-attachments/assets/b40c2642-0ef2-4fd9-b95f-58bbe888eb55)
+![image](https://github.com/user-attachments/assets/d6951cf8-4862-4e7b-8cd4-56addec52c7b)
 
 
 2. Draw a circle at the center of the image.
-```
+```py
 import cv2
 image = cv2.imread("image3.jpg")
-image = cv2.resize(image, (400, 300))
-height, width, _ = image.shape
-center_coordinates = (width // 2, height // 2)
-res = cv2.circle(image, center_coordinates, 120, (0, 255, 0), 10)
-cv2.imshow('Sachin.C', res)
+
+# Convert to grayscale
+img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+img = cv2.imread("image3.jpg")
+img = cv2.resize(img, (612, 612))
+img.shape
+start=(0,0)
+stop=(612,612)
+color=(100,255,100)
+thickness=20
+
+res_img=cv2.rectangle(img,start,stop,color,thickness)
+
+# Display the HSV image
+cv2.imshow('Image Window', res_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
@@ -120,7 +132,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
-![image](https://github.com/user-attachments/assets/0f874d0c-fe78-4fb2-b68a-d06ad2a0316b)
+![image](https://github.com/user-attachments/assets/627a6547-a8ef-449f-b6f7-37ea58627fe8)
 
 
 4.Add the text "OpenCV Drawing" at the top-left corner of the image.
