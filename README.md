@@ -64,7 +64,7 @@ Save the final modified image to your local directory.
 
 ### 1. Read and display the image
 i.Load an image from your local directory and display it.
-```
+```py
 import cv2
 import matplotlib.pyplot as plt
 # Read the image using OpenCV
@@ -107,7 +107,7 @@ plt.show()
 
 
 3.Draw a rectangle around a specific region of interest in the image.
-```
+```py
 import cv2
 image = cv2.imread("image3.jpg")
 image = cv2.resize(image, (400, 300))
@@ -125,7 +125,7 @@ cv2.destroyAllWindows()
 
 
 4.Add the text "OpenCV Drawing" at the top-left corner of the image.
-```
+```py
 # Load the image
 image = cv2.imread('image3.jpg') 
 
@@ -142,7 +142,7 @@ plt.show()
 
 ### iii)Image Color Conversion
 (i)Convert the image from RGB to HSV and display it
-```
+```py
 import cv2
 image = cv2.imread('image3.jpg',1)
 image = cv2.resize(image,(300,200))
@@ -158,7 +158,7 @@ cv2.destroyAllWindows()
 
 (2) Convert the image from RGB to GRAY and display it.
 
-```
+```py
 import cv2
 image = cv2.imread('image3.jpg',1)
 image = cv2.resize(image,(300,200))
@@ -174,7 +174,7 @@ cv2.destroyAllWindows()
 
 
 (3) Convert the image from RGB to YCrCb and display it.
-```
+```py
 import cv2
 image = cv2.imread('image3.jpg',1)
 image = cv2.resize(image,(300,200))
@@ -190,7 +190,7 @@ cv2.destroyAllWindows()
 
 
 (4) Convert the HSV image back to RGB and display it.
-```
+```py
 import cv2
 image = cv2.imread('image3.jpg',1)
 image = cv2.resize(image,(300,200))
@@ -207,7 +207,7 @@ cv2.destroyAllWindows()
 
 ### iv)Access and Manipulate Image Pixels
 (1) Access and print the value of the pixel at coordinates (100, 100)
-```
+```py
 import cv2
 image = cv2.imread("image3.jpg")
 pixel_value = image[100, 100]
@@ -219,7 +219,7 @@ print(f"Pixel value at (100, 100): {pixel_value}")
 
 
 (2) Modify the color of the pixel at (200, 200) to white
-```
+```py
 import cv2
 image = cv2.imread('image3.jpg',1)
 image = cv2.resize(image,(400,300))
@@ -236,7 +236,7 @@ cv2.destroyAllWindows()
 
 ### v)Image Resizing:
 Resize the original image to half its size and display it.
-```
+```py
 cv2.imshow('ORIGINAL IMAGE',image)
 resized_image = cv2.resize(image, (image.shape[1] // 2, image.shape[0] // 2))
 cv2.imshow('RESIZED IMAGE', resized_image)
@@ -250,7 +250,7 @@ cv2.destroyAllWindows()
 
 ### vi)Image Cropping
 Crop a region of interest (ROI) from the image (e.g., a 100x100 pixel area starting at (50, 50)) and display it.
-```
+```py
 import cv2
 image = cv2.imread('image3.jpg',1)
 image = cv2.resize(image,(400,300))
@@ -267,7 +267,7 @@ cv2.destroyAllWindows()
 
 ### vii)Image Flipping:
 (1) Flip the original image horizontally and display it.
-```
+```py
 import cv2
 image = cv2.imread("image3.jpg")
 image = cv2.resize(image,(300,200))
@@ -283,7 +283,7 @@ cv2.destroyAllWindows()
 
 
 (2) Flip the original image vertically and display it.
-```
+```py
 import cv2
 image = cv2.imread("image3.jpg")
 image = cv2.resize(image,(300,200))
@@ -300,7 +300,7 @@ cv2.destroyAllWindows()
 
 ### viii)Write and Save the Modified Image
 Save the final modified image to your local directory.
-```
+```py
 import cv2
 img = cv2.imread("image3.jpg")
 img = cv2.resize(img,(300,200))
